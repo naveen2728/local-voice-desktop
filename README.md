@@ -1,6 +1,6 @@
 # Local Voice Desktop
 
-Local Voice Desktop is a Windows-first, local voice productivity assistant. It provides offline speech-to-text, global dictation hotkeys, optional AI rewriting and commands, realtime OpenAI voice conversations, image generation, and an optional Gmail assistant.
+Local Voice Desktop is a Windows-first, local voice productivity assistant. It provides offline speech-to-text, global dictation hotkeys, optional AI rewriting and commands, realtime OpenAI voice conversations, add direct screenshots, and an optional Gmail assistant.
 
 > **Legacy-name notice:** Some internal modules, storage paths, screenshots, and UI strings still use the former working name `VoiceFlow`. They are retained temporarily for compatibility and will be migrated incrementally. This project is not affiliated with Voiceflow, Inc.
 
@@ -14,7 +14,6 @@ The project is usable but still being prepared for a wider public release. APIs 
 - Hold-to-dictate and AI-command global hotkeys
 - Optional Groq-powered cleanup, commands, and text chat
 - OpenAI Realtime speech-to-speech conversations with interruption support
-- Optional Pollinations image generation
 - Optional Gmail search, drafting, and sending
 - Windows Credential Manager storage for API keys and OAuth tokens
 - Portable Windows executable and installer build scripts
