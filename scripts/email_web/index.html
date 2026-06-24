@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Job Mail Tool</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>Job Mail Tool</h1>
+        <p>Local batch sender for resume outreach</p>
+      </div>
+      <div class="status-pill" id="serverStatus">Ready</div>
+    </header>
+
+    <main class="layout">
+      <section class="panel setup-panel">
+        <h2>Setup</h2>
+        <div class="field-grid">
+          <label>
+            Contacts CSV
+            <input id="csvPath" value="outputs/hr_campaign/hr_outreach_cleaned_import.csv" />
+          </label>
+          <label>
+            Resume PDF
+            <input id="attachmentPath" value="resume.pdf" />
+          </label>
+          <label>
+            From Email
+            <input id="fromEmail" placeholder="you@example.com" />
+          </label>
+          <label>
+            Sender Name
+            <input id="senderName" placeholder="Your name" />
+          </label>
+          <label>
+            Sender Label
+            <input id="senderCompany" placeholder="Your organization" />
+          </label>
+          <label>
+            SMTP Host
+            <input id="smtpHost" value="smtp.gmail.com" />
+          </label>
+          <label>
+            SMTP Port
+            <input id="smtpPort" type="number" value="587" />
+          </label>
+          <label>
+            SMTP Username
+            <input id="smtpUsername" placeholder="you@example.com" />
+          </label>
+          <label>
+            App Password
+            <input id="smtpPassword" type="password" placeholder="Paste locally only" />
+          </label>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Approve Contacts</h2>
+        <div class="inline-fields">
+          <label>
+            Start
+            <input id="startRow" type="number" value="151" min="1" />
+          </label>
+          <label>
+            End
+            <input id="endRow" type="number" value="200" min="1" />
+          </label>
+          <button id="markRange">Mark Range</button>
+        </div>
+        <p class="fine-print">Only marked rows are eligible for sending.</p>
+      </section>
+
+      <section class="panel">
+        <h2>Batch</h2>
+        <div class="inline-fields">
+          <label>
+            Skip
+            <input id="skip" type="number" value="150" min="0" />
+          </label>
+          <label>
+            Batch Size
+            <input id="batchSize" type="number" value="50" min="1" max="50" />
+          </label>
+          <label>
+            Delay
+            <input id="delaySeconds" type="number" value="90" min="10" />
+          </label>
+        </div>
+        <div class="actions">
+          <button id="preview">Preview</button>
+          <button id="send" class="primary">Send Batch</button>
+          <button id="stop" class="danger">Stop</button>
+        </div>
+      </section>
+
+      <section class="panel preview-panel">
+        <h2>Preview</h2>
+        <div class="metrics">
+          <span id="eligibleMetric">Eligible: -</span>
+          <span id="batchMetric">Batch: -</span>
+          <span id="missingMetric">Missing basis: -</span>
+        </div>
+        <div class="message-meta">
+          <div id="previewTo">To: -</div>
+          <div id="previewSubject">Subject: -</div>
+        </div>
+        <pre id="previewBody">Run preview to inspect the first email in the selected batch.</pre>
+      </section>
+
+      <section class="panel progress-panel">
+        <h2>Progress</h2>
+        <div class="progress-grid">
+          <div><strong id="sentCount">0</strong><span>Sent</span></div>
+          <div><strong id="failedCount">0</strong><span>Failed</span></div>
+          <div><strong id="totalCount">0</strong><span>Total</span></div>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Email</th>
+              <th>Status</th>
+              <th>Detail</th>
+            </tr>
+          </thead>
+          <tbody id="events"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>
