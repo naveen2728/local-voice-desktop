@@ -31,8 +31,8 @@ The source code is free and open source. Cloud providers may charge for API usag
 ## Run from source
 
 ```powershell
-git clone <your-repository-url>
-cd voice-flow
+git clone https://github.com/naveen2728/local-voice-desktop.git
+cd local-voice-desktop
 py -3.12 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
