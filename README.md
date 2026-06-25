@@ -2,6 +2,8 @@
 
 Local Voice Desktop is a Windows-first, local voice productivity assistant. It provides offline speech-to-text, global dictation hotkeys, optional AI rewriting and commands, realtime OpenAI voice conversations, add direct screenshots, and an optional Gmail assistant.
 
+Website: [voicefloww.vercel.app](https://voicefloww.vercel.app)
+
 > **Legacy-name notice:** Some internal modules, storage paths, screenshots, and UI strings still use the former working name `VoiceFlow`. They are retained temporarily for compatibility and will be migrated incrementally. This project is not affiliated with Voiceflow, Inc.
 
 ## Status
