@@ -44,7 +44,8 @@ The first run downloads the Whisper `base.en` model unless a bundled model is pr
 ## Main controls
 
 - Hold `Ctrl+Space` to dictate; release to paste.
-- Hold `Shift` briefly to record an AI command; release to run it.
+- Hold `Ctrl+Shift+Space` to record an AI command; release to run it.
+- Optional mouse workflow: map one mouse button to `Ctrl+Space` for dictation and another to `Ctrl+Shift+Space` for AI commands.
 - Press `Backspace` while recording to cancel.
 - Press `Escape` twice quickly to quit.
 - Right-click the floating orb for settings, diagnostics, AI keys, Gmail actions, and realtime voice chat.

@@ -18,10 +18,10 @@ release\VoiceFlow-3.0.0-Setup.exe
 
 - Hold `Ctrl+Space` for dictation, then release it to stop and process.
 - Hold `Ctrl+Shift+Space` for an AI command, then release it to stop and process.
-- Hold `Shift`, speak an AI request, then release to paste the answer.
 - Right-click the orb and choose `Start Realtime Voice Chat` to talk with AI by voice. Use `Stop Realtime Voice Chat` from the same menu to end it.
 - Realtime voice uses an OpenAI API key. Set it from `Change Realtime Voice API Key...` if VoiceFlow asks for one.
-- In Settings, enable `Use mouse side buttons for dictation and AI commands`. Mouse Back records dictation while held. Mouse Forward records an AI command while held. VoiceFlow blocks those buttons from also acting as browser Back/Forward.
+- To use a mouse, map one mouse button to `Ctrl+Space` for dictation and another mouse button to `Ctrl+Shift+Space` for AI commands. Hold the button while speaking, then release to process.
+- If your mouse software supports blocking the original Back/Forward action, enable that so the buttons only trigger VoiceFlow.
 - Press `Backspace` while recording to cancel it.
 - Press `Escape` twice quickly to quit.
 - Right-click the orb for VoiceFlow AI and screenshot questions.
